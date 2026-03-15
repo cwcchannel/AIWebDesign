@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>創辦人介紹｜陳小奇</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#f2f2f2;
+  line-height:1.6;
+  transition:0.3s;
+}
+
+.dark-mode{
+  background-color:#1f1f1f;
+  color:#eeeeee;
+}
+
+header{
+  text-align:center;
+  padding:40px 20px 10px 20px;
+}
+
+header h1{
+  font-size:32px;
+  margin-bottom:5px;
+}
+
+header p{
+  font-size:18px;
+  color:#555;
+}
+
+.dark-mode header p{
+  color:#ccc;
+}
+
+main{
+  max-width:800px;
+  margin:0 auto;
+  background:#ffffff;
+  padding:40px;
+  transition:0.3s;
+}
+
+.dark-mode main{
+  background:#2b2b2b;
+}
+
+figure{
+  text-align:center;
+  margin:0 0 30px 0;
+}
+
+img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+figcaption{
+  margin-top:10px;
+  color:#666;
+}
+
+.dark-mode figcaption{
+  color:#ccc;
+}
+
+h2{
+  font-size:22px;
+  margin-top:30px;
+}
+
+p{
+  margin-bottom:16px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#666;
+}
+
+.dark-mode footer{
+  color:#bbb;
+}
+
+.controls{
+  text-align:center;
+  margin-top:20px;
+}
+
+button{
+  margin:5px;
+  padding:8px 14px;
+  font-size:14px;
+  cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1 id="mainTitle">陳小奇</h1>
+<p>科技產品與系統開發創業者</p>
+</header>
+
+<div class="controls">
+<button onclick="toggleMode()">切換深色 / 淺色</button>
+<button onclick="toggleIntro()">顯示 / 隱藏介紹</button>
+<button onclick="changeTitle()">改變標題文字</button>
+</div>
+
+<main>
+
+<section>
+<figure>
+<img src="images/avatar.png" alt="陳小奇創辦人照片">
+<figcaption>創辦人｜陳小奇</figcaption>
+</figure>
+</section>
+
+<section id="intro">
+<h2>關於我</h2>
+
+<p>
+我叫陳小奇，出生於 2000 年，是一位專注於科技產品與系統開發的創業者。
+我的學術背景來自 CwC 碩士體系，這段學習歷程讓我在技術架構、
+產品思維與數位系統整合上建立了扎實的基礎。
+</p>
+
+<p>
+畢業後，我投入系統開發工程師的工作，
+長期專注於網頁設計與系統開發領域，
+累積了從前端介面設計到系統邏輯建構的完整實務經驗，
+並持續探索如何透過技術提升產品的使用價值與商業效率。
+</p>
+
+<p>
+在我的職涯發展中，我始終相信科技不只是工具，
+而是一種能夠重新定義工作方式與創造價值的力量。
+因此，我特別關注 AI 技術與數位系統的整合應用，
+希望透過更智慧化的工具，
+讓產品不僅具備良好的使用體驗，
+也能為企業與創作者帶來更高的效率與可能性。
+</p>
+
+<p>
+我的創業理念，是以技術為核心、
+以使用者需求為導向，
+打造兼具創新與實用價值的數位產品。
+我期望透過持續的技術研發與產品實驗，
+將 AI、系統開發與網頁設計整合成更完整的解決方案，
+協助更多個人與企業在數位時代中建立自己的競爭力與影響力。
+</p>
+
+</section>
+
+<section>
+<h2>聯絡方式</h2>
+<p>Email：<a href="mailto:cwcchannel1@gmail.com">cwcchannel1@gmail.com</a></p>
+</section>
+
+</main>
+
+<footer>
+<p>© 陳小奇</p>
+</footer>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("dark-mode");
+}
+
+function toggleIntro(){
+  var intro = document.getElementById("intro");
+  if(intro.style.display === "none"){
+    intro.style.display = "block";
+  }else{
+    intro.style.display = "none";
+  }
+}
+
+function changeTitle(){
+  var title = document.getElementById("mainTitle");
+  title.textContent = "歡迎來到我的創業介紹頁";
+}
+</script>
+
+</body>
+</html>
