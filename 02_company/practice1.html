@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>精品咖啡展示</title>
+<style>
+    body {
+        margin: 0;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #0f0f0f;
+        color: #f5f5f5;
+    }
+
+    header {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+        border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 42px;
+        letter-spacing: 3px;
+    }
+
+    header p {
+        margin-top: 10px;
+        color: #aaa;
+    }
+
+    .container {
+        width: 1200px;
+        margin: 40px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 360px;
+        background-color: #1a1a1a;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    }
+
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #bbb;
+        line-height: 1.6;
+    }
+
+    .card button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        background: #c59d5f;
+        color: #000;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .card button:hover {
+        background: #e6b86a;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>精品咖啡選品</h1>
+    <p>探索來自世界各地的頂級咖啡風味</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="咖啡1">
+        <div class="card-content">
+            <h3>衣索比亞 耶加雪菲</h3>
+            <p>帶有花香與柑橘酸質，口感清新細緻，是精品咖啡愛好者的經典選擇。</p>
+            <button onclick="alert('已加入收藏')">查看詳情</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="咖啡2">
+        <div class="card-content">
+            <h3>哥倫比亞 單品咖啡</h3>
+            <p>平衡的酸甜與堅果風味，口感圓潤滑順，適合日常品飲。</p>
+            <button onclick="alert('已加入收藏')">查看詳情</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="咖啡3">
+        <div class="card-content">
+            <h3>肯亞 AA 級咖啡</h3>
+            <p>濃郁莓果香氣與明亮酸值，層次豐富，帶來極致味覺體驗。</p>
+            <button onclick="alert('已加入收藏')">查看詳情</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    console.log("精品咖啡展示頁已載入");
+</script>
+
+</body>
+</html>
