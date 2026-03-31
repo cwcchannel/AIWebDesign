@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>顧客資料表</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    padding: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  thead {
+    background-color: #4F8CFF;
+    color: #fff;
+  }
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  th {
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<table id="customerTable">
+  <thead>
+    <tr>
+      <th onclick="sortTable(0)">顧客編號 (Customer ID)</th>
+      <th onclick="sortTable(1)">姓名 (Name)</th>
+      <th onclick="sortTable(2)">電子郵件 (Email)</th>
+      <th onclick="sortTable(3)">會員等級 (Membership Level)</th>
+      <th onclick="sortTable(4)">註冊日期 (Registration Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C001</td>
+      <td>王小明</td>
+      <td>ming.wang@example.com</td>
+      <td>金卡</td>
+      <td>2024-01-15</td>
+    </tr>
+    <tr>
+      <td>C002</td>
+      <td>李美麗</td>
+      <td>mei.li@example.com</td>
+      <td>銀卡</td>
+      <td>2023-11-03</td>
+    </tr>
+    <tr>
+      <td>C003</td>
+      <td>陳大偉</td>
+      <td>david.chen@example.com</td>
+      <td>一般會員</td>
+      <td>2025-02-20</td>
+    </tr>
+    <tr>
+      <td>C004</td>
+      <td>林志玲</td>
+      <td>ling.lin@example.com</td>
+      <td>金卡</td>
+      <td>2022-07-18</td>
+    </tr>
+    <tr>
+      <td>C005</td>
+      <td>張家豪</td>
+      <td>hao.zhang@example.com</td>
+      <td>銀卡</td>
+      <td>2024-06-09</td>
+    </tr>
+    <tr>
+      <td>C006</td>
+      <td>黃佩琪</td>
+      <td>peiqi.huang@example.com</td>
+      <td>一般會員</td>
+      <td>2023-03-27</td>
+    </tr>
+    <tr>
+      <td>C007</td>
+      <td>吳建國</td>
+      <td>guo.wu@example.com</td>
+      <td>金卡</td>
+      <td>2025-01-05</td>
+    </tr>
+    <tr>
+      <td>C008</td>
+      <td>蔡依婷</td>
+      <td>ting.tsai@example.com</td>
+      <td>銀卡</td>
+      <td>2022-12-11</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+function sortTable(n) {
+  const table = document.getElementById("customerTable");
+  let rows = Array.from(table.rows).slice(1);
+  let asc = table.getAttribute("data-sort") !== "asc";
+  
+  rows.sort((a, b) => {
+    let x = a.cells[n].innerText;
+    let y = b.cells[n].innerText;
+    return asc ? x.localeCompare(y) : y.localeCompare(x);
+  });
+
+  table.setAttribute("data-sort", asc ? "asc" : "desc");
+
+  const tbody = table.querySelector("tbody");
+  tbody.innerHTML = "";
+  rows.forEach(row => tbody.appendChild(row));
+}
+</script>
+
+</body>
+</html>
