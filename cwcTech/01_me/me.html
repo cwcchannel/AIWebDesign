@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陳小奇｜個人履歷</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+background:linear-gradient(135deg,#eef2f7,#f8fbff);
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+min-height:100vh;
+}
+
+.hero{
+padding-top:70px;
+padding-bottom:30px;
+text-align:center;
+}
+
+.hero h1{
+font-weight:700;
+letter-spacing:1px;
+}
+
+.hero p{
+color:#6c757d;
+}
+
+.avatar{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:50%;
+margin:auto;
+display:block;
+border:6px solid white;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+transition:all .3s ease;
+}
+
+.avatar:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.section-title{
+margin-bottom:20px;
+font-weight:600;
+}
+
+.card{
+border:0;
+border-radius:18px;
+background:white;
+padding:25px;
+transition:all .25s ease;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+height:100%;
+}
+
+.card:hover{
+background:#f3f8ff;
+transform:translateY(-6px);
+box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+
+.email-card{
+cursor:pointer;
+border-radius:12px;
+transition:all .2s ease;
+}
+
+.email-card:hover{
+background:#eef5ff;
+}
+
+ul{
+padding-left:18px;
+}
+
+.toast{
+backdrop-filter:blur(8px);
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="hero">
+<img src="images/avatar.png" class="avatar img-fluid" alt="avatar">
+<h1 class="mt-4">陳小奇</h1>
+<p>科技產品 × 系統開發 × AI 整合</p>
+</div>
+
+<div class="row g-4 pb-5">
+
+<div class="col-lg-4">
+<div class="card">
+<h4 class="section-title">基本資料</h4>
+
+<ul class="list-unstyled">
+<li>姓名：陳小奇</li>
+<li>出生：2000 年</li>
+<li>職業：科技創業者</li>
+<li>專長：系統開發 / 網頁設計</li>
+</ul>
+
+<div class="email-card p-3 mt-3 border" id="emailBox">
+<strong>Email</strong>
+<div id="emailText">cwcchannel1@gmail.com</div>
+<small class="text-muted">點擊可複製</small>
+</div>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card">
+<h4 class="section-title">專業背景</h4>
+
+<ul>
+<li>CwC 碩士體系</li>
+<li>系統開發工程師</li>
+<li>網頁設計與前端開發</li>
+<li>系統架構設計</li>
+<li>AI × 數位系統整合</li>
+<li>產品思維與數位產品設計</li>
+</ul>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card">
+<h4 class="section-title">自我介紹</h4>
+
+<p>
+我叫陳小奇，出生於 2000 年，是一位專注於科技產品與系統開發的創業者。
+我的學術背景來自 CwC 碩士體系，這段學習歷程讓我在技術架構、
+產品思維與數位系統整合上建立了扎實的基礎。
+</p>
+
+<p>
+畢業後，我投入系統開發工程師的工作，
+長期專注於網頁設計與系統開發領域，
+累積了從前端介面設計到系統邏輯建構的完整實務經驗，
+並持續探索如何透過技術提升產品的使用價值與商業效率。
+</p>
+
+<p>
+我相信科技不只是工具，
+而是一種能重新定義工作方式與創造價值的力量。
+因此我特別關注 AI 技術與數位系統整合，
+希望透過更智慧的工具提升企業與創作者的效率。
+</p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+<div id="copyToast" class="toast text-bg-dark border-0" role="alert">
+
+<div class="d-flex">
+<div class="toast-body">
+已複製 email
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const emailBox = document.getElementById("emailBox");
+const emailText = document.getElementById("emailText").innerText;
+
+const toastElement = document.getElementById("copyToast");
+const toast = new bootstrap.Toast(toastElement,{delay:2000});
+
+emailBox.addEventListener("click",function(){
+
+navigator.clipboard.writeText(emailText);
+
+toast.show();
+
+});
+
+</script>
+
+</body>
+</html>

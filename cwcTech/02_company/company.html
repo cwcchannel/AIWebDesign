@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C w C Tech</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #1f2937;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* Hero 區（科技漸層） */
+    .hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #dbeafe, #e9d5ff);
+      border-bottom: 1px solid #e5e7eb;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+
+    /* 淡入動畫 */
+    .fade-in {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .fade-in-delay {
+      animation: fadeInUp 1.4s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Logo 容器 */
+    .logo-box {
+      width: 70px;
+      height: 70px;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      background-color: rgba(255,255,255,0.6);
+      backdrop-filter: blur(6px);
+      overflow: hidden;
+    }
+
+    /* Logo 圖片 */
+    .logo-box img {
+      width: 70%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-box:hover img {
+      transform: scale(1.08);
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+
+    .hero p {
+      color: #374151;
+      max-width: 500px;
+    }
+
+    /* 區塊 */
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    /* 卡片 */
+    .card-custom {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-6px);
+      border-color: #c7d2fe;
+      box-shadow: 0 12px 30px rgba(99,102,241,0.15);
+    }
+
+    .text-muted-custom {
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+
+          <!-- Logo -->
+          <div class="logo-box fade-in">
+            <img src="images/logo.png" alt="C w C Tech Logo" class="img-fluid">
+          </div>
+
+          <h1 class="mb-3 fade-in">C w C Tech</h1>
+
+          <h5 class="mb-3 fw-normal fade-in-delay">
+            讓每一次簡報，都更聰明
+          </h5>
+
+          <p class="text-muted-custom fade-in-delay">
+            以技術驅動溝通效率，專注打造結合 AI 與簡報場景的智慧工具，
+            提升商務表達的專業度與影響力。
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 願景 -->
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 text-center">
+          <div class="section-title">願景 Vision</div>
+          <p class="text-muted-custom">
+            重塑全球簡報體驗標準。以 AI 數位簡報筆為核心，
+            成為商務人士、教育者與創作者不可或缺的智慧輔助工具，
+            建立高效溝通的新典範。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌理念 -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+          <div class="card-custom">
+            <div class="section-title">即時反應</div>
+            <p class="text-muted-custom">
+              AI 即時分析簡報節奏，提供關鍵提示，
+              協助使用者在每一刻做出最佳表達決策。
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card-custom">
+            <div class="section-title">內容掌控</div>
+            <p class="text-muted-custom">
+              精準掌握重點與流程，讓簡報不再只是播放內容，
+              而是有策略的溝通工具。
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card-custom">
+            <div class="section-title">互動升級</div>
+            <p class="text-muted-custom">
+              結合人機互動與語音提示，
+              讓使用者在關鍵時刻更自信且具說服力。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌背景 -->
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+
+          <div class="section-title">品牌理念與背景</div>
+
+          <p class="text-muted-custom">
+            洞察現代簡報對即時反應、內容掌控與互動性的高度需求，
+            C w C Tech 結合 AI 分析與人機互動技術，
+            開發智慧簡報筆，提供語音提示、重點提醒與節奏掌控功能。
+          </p>
+
+          <p class="text-muted-custom">
+            我們不只是提供工具，而是打造「表達力放大器」，
+            協助用戶在各類商務與創作場景中穩定發揮，
+            讓每一次表達都更精準、更具影響力。
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

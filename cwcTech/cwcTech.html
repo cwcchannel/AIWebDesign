@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>輕科技網站模板</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #F8FAFC;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* 導覽列 & 頁尾漸層 */
+    .gradient-bar {
+      background: linear-gradient(to right, #EDEDED, #FFFBE3);
+    }
+
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+    }
+
+    /* iframe 區域 */
+    .iframe-container {
+      width: 100%;
+      height: 85vh;
+      border: none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ✅ Navbar -->
+<nav class="navbar navbar-expand-lg gradient-bar">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#" onclick="loadPage('02_company/company.html')">
+      <img src="images/logo.png" height="40">
+    </a>
+
+    <!-- 手機按鈕 -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 導覽 -->
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto text-center">
+
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#" onclick="loadPage('02_company/company.html')">
+            首頁
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#" onclick="loadPage('04_product/product.html')">
+            產品
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#" onclick="loadPage('05_table/table.html')">
+            功能
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#" onclick="loadPage('06_shopping/shopping.html')">
+            訂購
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#" onclick="loadPage('07_faq/faq.html')">
+            問與答
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ 主內容（iframe） -->
+<main class="container-fluid p-0">
+  <iframe 
+    id="mainFrame"
+    src="02_company/company.html"
+    class="iframe-container">
+  </iframe>
+</main>
+
+<!-- ✅ Footer -->
+<footer class="gradient-bar py-3">
+  <div class="container d-flex justify-content-end">
+    <a href="#" class="text-decoration-none text-primary"
+       onclick="loadPage('01_me/me.html')">
+      關於我
+    </a>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- iframe 切換功能 -->
+<script>
+  function loadPage(page) {
+    document.getElementById("mainFrame").src = page;
+
+    // 手機選單收合
+    const menu = document.getElementById("menu");
+    if (menu.classList.contains("show")) {
+      new bootstrap.Collapse(menu).hide();
+    }
+  }
+</script>
+
+</body>
+</html>
